@@ -165,8 +165,8 @@ class GenerationPipeline:
 
         # Set seed
         if request.seed < 0:
-            request.seed = secure_randint(0, 10000)
-            set_random_seed(0)
+            request.seed = 0
+            set_random_seed(request.seed)
         else:
             set_random_seed(request.seed)
 
